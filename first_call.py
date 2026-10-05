@@ -31,7 +31,8 @@ def cost_usd(input_tokens, output_tokens, thought_tokens):
     input_cost = input_tokens / 1_000_000 * INPUT_PRICE_PER_M
     output_cost = (output_tokens + thought_tokens) / 1_000_000 * OUTPUT_PRICE_PER_M
     return input_cost + output_cost
-
+print("=== COST TEST ===")
+print(cost_usd(1000,200,300))
 def classify(v1, v2, temperature=0, thinking="low"):
     prompt = f"Version 1: {v1}\nVersion 2: {v2}\n\nIs this change COSMETIC or MATERIAL? Explain briefly."
 
